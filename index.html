@@ -22,6 +22,8 @@
           colors: {
             clifford: '#da373d',
             'primary-color': '#FF4240',
+            'btn-bg': '#FF4240',
+
           }
         }
       }
@@ -31,17 +33,68 @@
     .font-manrope {
       font-family: 'Manrope', sans-serif;
     }
+    #form {
+            /* display: grid; */
+            grid-template-columns: 30% repeat(1, 1fr);
+            gap: 50px;
+        }
+
+        #menu li :hover {
+            border: none;
+            color: #ff0000;
+            background: none;
+            font-size: 30px;
+            /* background: #13131808; */
+        }
   </style>
 </head>
 
 <body class="font-manrope">
-  <header class="container mx-auto">
+  <header class="container mx-auto px-4 lg:px-0">
+
+    <div class="navbar bg-base-100 py-8 ">
+      <div class="navbar-start">
+          <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+              </div>
+              <ul tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 b">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Blog</a></li>
+                  <li><a>Contact</a></li>
+              </ul>
+          </div>
+          <a class="text-3xl font-extrabold">Hockey<span class="text-red-600">’</span>s</a>
+      </div>
+      <div class="navbar-center hidden lg:flex px-10">
+          <ul id="menu" class="menu menu-horizontal px-1 text-xl font-normal">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+          </ul>
+      </div>
+      <div class="navbar-end">
+          <i class="fa-solid fa-magnifying-glass pr-4 text-3xl text-[#89898B]"></i>
+          <a class="btn bg-[#FF4240] text-white text-sm font-bold">Get Ticket</a>
+      </div>
+  </div>
+
+
     <div class="carousel w-full">
       <div id="slide1" class="carousel-item relative w-full">
         <img src="./Images/1.png" class="w-full" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" class="btn btn-circle">❮</a>
-          <a href="#slide2" class="btn btn-circle">❯</a>
+          <a href="#slide2" class="btn btn-circle bg-black border-none text-white">❮</a>
+          <a href="#slide2" class="btn btn-circle bg-black border-none text-white">❯</a>
         </div>
         <!-- <div class="bg-[#131318] p-8">
                 <h3 class="text-white font-extrabold text-2xl">Meet all the heroes from the field</h3>
@@ -53,8 +106,8 @@
       <div id="slide2" class="carousel-item relative w-full">
         <img src="./Images/4.png" class="w-full" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" class="btn btn-circle">❮</a>
-          <a href="#slide2" class="btn btn-circle">❯</a>
+          <a href="#slide1" class="btn btn-circle bg-black border-none text-white">❮</a>
+          <a href="#slide1" class="btn btn-circle bg-black border-none text-white">❯</a>
         </div>
       </div>
     </div>
@@ -74,8 +127,8 @@
       <div class="grid grid-cols-1   lg:gap-8 px-12 mt-12 lg:grid-cols-4">
         <!-- first progress -->
         <div class="text-center mt-6">
-          <div class="radial-progress bg-white" style="--value:87; color:#FF4240;" role="progressbar"><span
-              class="text-black">87%</span></div>
+          <div class="radial-progress bg-gray-500" style="--value:87; color:#FF4240;" role="progressbar"><span
+              class="text-black bg-white rounded-full px-4 py-5">87%</span></div>
           <h4 class="text-[#131318] font-semibold text-xl">
             Prayer Facility
           </h4>
@@ -85,8 +138,8 @@
         </div>
         <!-- second progress -->
         <div class="text-center mt-6">
-          <div class="radial-progress bg-white" style="--value:95; color:#49D293" role="progressbar"><span
-              class="text-black">95%</span></div>
+          <div class="radial-progress bg-gray-500" style="--value:95; color:#49D293" role="progressbar"><span
+              class="text-black bg-white rounded-full px-4 py-5">95%</span></div>
           <h4 class="text-[#131318] font-semibold text-xl">
             Experienced Coach
           </h4>
@@ -96,8 +149,8 @@
         </div>
         <!-- third progress -->
         <div class="text-center mt-6">
-          <div class="radial-progress bg-white" style="--value:90; color:#FFB546" role="progressbar"><span
-              class="text-black">90%</span></div>
+          <div class="radial-progress bg-gray-500" style="--value:90; color:#FFB546" role="progressbar"><span
+              class="text-black bg-white rounded-full px-4 py-5">90%</span></div>
           <h4 class="text-[#131318] font-semibold text-xl">
             Prayer Facility
           </h4>
@@ -107,8 +160,8 @@
         </div>
         <!-- fourth progress -->
         <div class="text-center mt-6">
-          <div class="radial-progress bg-white" style="--value:85; color:#4C8DF1" role="progressbar"><span
-              class="text-black">85%</span></div>
+          <div class="radial-progress bg-gray-500" style="--value:85; color:#4C8DF1" role="progressbar"><span
+              class="text-black bg-white rounded-full px-4 py-5">85%</span></div>
           <h4 class="text-[#131318] font-semibold text-xl">
             Prayer Facility
           </h4>
@@ -120,7 +173,7 @@
     </section>
     <!-- program section -->
     <section class="mt-24">
-      <div class="text-center mt-24 p-8">
+      <div class="text-center mt-24 p-8 space-y-4">
         <h3 class="text-[#131318] font-extrabold text-3xl">
           Program Sections
         </h3>
@@ -507,8 +560,268 @@
         </div>
       </section>
     </section>
+
+            <!-- Clients Question -->
+            <section class="mt-20 px-8 lg:px-0">
+              <!-- FAQ header section -->
+              <div class="text-center space-y-5 px-10 lg:px-80">
+                  <h1 class="text-4xl font-extrabold">Clients Question</h1>
+                  <p class="">It seems like you have a question about clients. Could you please provide more details or
+                      clarify your question? Are you asking about managing clients</p>
+              </div>
+  
+              <div class="mt-16 flex gap-5 flex-col px-4 lg:flex-row border border-solid rounded-lg border-gray-200 p-4">
+  
+                  <!-- FAQ image section -->
+                  <div class="">
+                      <img class="w-full" src="./Images/11.png" alt="">
+                  </div>
+  
+                  <!-- FAQ question section -->
+                  <div class="flex-1">
+                      <!-- question 01 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Equipment
+                          </div>
+                          <div class="collapse-content">
+                              <p>It looks like your request is quite broad. "Equipment" can refer to various types of
+                                  tools, machinery, or gear used for different purposes in different contexts. If you
+                                  could provide more details or specify the context, I'd be better able to assist you.</p>
+                          </div>
+                      </div>
+                      <hr>
+  
+                      <!-- question 02 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Hockey Training
+                          </div>
+                          <div class="collapse-content">
+                              <p>Hockey training encompasses a range of activities aimed at developing the skills,
+                                  fitness, and overall performance of hockey players. </p>
+                          </div>
+                      </div>
+                      <hr>
+  
+                      <!-- question 03 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Ski Touring
+                          </div>
+                          <div class="collapse-content">
+                              <p>Ski touring, also known as backcountry skiing, is a form of skiing where participants
+                                  travel across snowy terrain using skis. Unlike downhill skiing at resorts, ski touring
+                              </p>
+                          </div>
+                      </div>
+                      <hr>
+  
+                      <!-- question 04 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Booking
+                          </div>
+                          <div class="collapse-content">
+                              <p>The term "booking" generally refers to the process of reserving or securing something in
+                                  advance, often by making a reservation or appointment. </p>
+                          </div>
+                      </div>
+                      <hr>
+  
+                      <!-- question 05 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Pricings
+                          </div>
+                          <div class="collapse-content">
+                              <p>"Pricing" refers to the process of setting and determining the cost of goods or services.
+                                  It is a crucial aspect of business strategy and involves considering various factors to
+                                  establish a competitive and profitable pricing structure. </p>
+                          </div>
+                      </div>
+                      <hr>
+  
+                      <!-- question 06 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Value-based Pricing
+                          </div>
+                          <div class="collapse-content">
+                              <p>Value-based pricing is a strategy where the price of a product or service is determined
+                                  primarily by the perceived value it provides to the customer. Instead of relying solely
+                                  on production costs or market conditions, </p>
+                          </div>
+                      </div>
+                      <hr>
+  
+                      <!-- question 07 -->
+                      <div class="collapse collapse-plus ">
+                          <input type="radio" name="my-accordion-3" checked="checked" />
+                          <div class="collapse-title text-xl font-medium">
+                              Competitive Pricing
+                          </div>
+                          <div class="collapse-content">
+                              <p>Competitive pricing is a strategy where a company sets the price of its products or
+                                  services based on the prices charged by its competitors in the same industry or market.
+                              </p>
+                          </div>
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+          </section>
+  
+          <!-- Get In Touch -->
+          <section class="mt-20">
+              <!-- header text -->
+              <div class="text-center space-y-5 px-10 lg:px-80">
+                  <h1 class="text-4xl font-extrabold">Get In Touch</h1>
+                  <p class="">It seems like you have a question about clients. Could you please provide more details or
+                      clarify your question? Are you asking about managing clients </p>
+              </div>
+  
+              <!-- contact info  -->
+              <div class="mt-20  px-8 lg:grid " id="form">
+                  <div class="p-5 flex flex-col gap-6 border-2 border-solid rounded-lg border-gray-400">
+                      <div class="card bg-[#bced6d1a]">
+                          <div class="card-body">
+                              <i class="fa-solid fa-phone-volume text-5xl text-green-600"></i>
+                              <p>Phone Number : </p>
+                              <h2 class="card-title">+801555555</h2>
+                          </div>
+                      </div>
+  
+                      <div class="card  bg-[#fddd5f1a]">
+                          <!-- background: rgba(188, 237, 109, 0.10); -->
+                          <div class="card-body">
+                              <i class="fa-regular fa-envelope text-5xl text-amber-500	"></i>
+                              <p>email </p>
+                              <h2 class="card-title">user@gmail.com</h2>
+                          </div>
+                      </div>
+  
+                      <div class="card  bg-[#629cf31a]">
+                          <!-- background: rgba(188, 237, 109, 0.10); -->
+                          <div class="card-body">
+                              <i class="fa-solid fa-location-dot text-5xl text-rose-600	"></i>
+                              <p>location </p>
+                              <h2 class="card-title">Mirpur, Dhaka</h2>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- contact form -->
+                  <div class="mt-6 lg:mt-0">
+                      <form action="">
+                          <div class="flex gap-6 mb-5 flex-col lg:flex-row">
+                              <div class="flex-1">
+                                  <h4 class="text-xl font-bold mb-3 ">your name</h4>
+                                  <input class="bg-[#13131808] rounded-md p-4 w-full lg:w-80" type="text" name="name"
+                                      id="" placeholder="your name">
+                              </div>
+                              <div class="flex-1">
+                                  <h4 class="text-xl font-bold mb-3">your email</h4>
+                                  <input class="bg-[#13131808] rounded-md p-4 w-full lg:w-80" type="email" name="" id=""
+                                      placeholder="your email">
+                              </div>
+                          </div>
+                          <div class="flex gap-6 flex-col lg:flex-row">
+                              <div class="flex-1 ">
+                                  <h4 class="text-xl font-bold mb-3">Subject</h4>
+                                  <input class="bg-[#13131808] rounded-md p-4 w-full lg:w-80" type="text" name="name"
+                                      id="" placeholder="your name">
+                              </div>
+                              <div class="flex-1">
+                                  <h4 class="text-xl font-bold mb-3">phone Number</h4>
+                                  <input class="bg-[#13131808] rounded-md p-4 w-full lg:w-80" type="number" name="" id=""
+                                      placeholder="your email">
+                              </div>
+                          </div>
+                          <label class="form-control">
+                              <div class="label">
+                                  <span class="text-xl font-bold mb-3">Message</span>
+                              </div>
+                              <textarea class="textarea textarea-bordered w-full h-80 bg-[#13131808]"
+                                  placeholder="write your Message"></textarea>
+  
+                          </label>
+                          <button class="btn text-white w-full lg:w-full mt-2 bg-[#FF4240]">send message</button>
+                      </form>
+                  </div>
+              </div>
+          </section>
+  
+          <!-- socail icon -->
+          <section class="bg-[#13131808]  h-36 mt-20">
+              <div class="text-center pt-10">
+                  <h3 class="text-2xl font-extrabold">Social Media</h3>
+                  <ul class="flex justify-center gap-8 text-xl mt-4">
+                      <li><i class="fa-brands fa-twitter"></i></li>
+                      <li><i class="fa-brands fa-facebook-f"></i></li>
+                      <li><i class="fa-brands fa-instagram"></i></li>
+                      <li><i class="fa-brands fa-github"></i></li>
+                  </ul>
+              </div>
+          </section>
+
+
   </main>
-  <footer>
+  
+
+  
+    <!-- footer section -->
+    <footer class="bg-black mt-20">
+      <footer class="footer p-10 container text-white mx-auto text-base-content">
+          <div class=" text-center ml-28 lg:text-left mr-28">
+              <aside class="space-y-3">
+                  <h3 class="text-2xl font-extrabold">Get In Touch</h3>
+                  <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+
+                  <div class="flex gap-2 flex-row item-center">
+                      <i class="fa-regular fa-envelope text-red-600"></i>
+                      <p>user@gmail.com</p>
+                  </div>
+                  <div class="flex gap-2 flex-row item-center">
+                      <i class="fa-solid fa-phone text-red-600"></i>
+                      <p>+8801555555</p>
+                  </div>
+              </aside>
+          </div>
+
+          <div class="grid ml-10 grid-cols-1 lg:grid-cols-2 gap-36">
+              <div class="flex gap-36 justify-center lg:justify-start">
+                  <nav class="flex flex-col">
+                      <header class="footer-title">Legal</header>
+                      <a class="link link-hover">Terms of use</a>
+                      <a class="link link-hover">Privacy policy</a>
+                      <a class="link link-hover">Cookie policy</a>
+                  </nav>
+                  <nav class="flex flex-col ">
+                      <header class="footer-title">Company</header>
+                      <a class="link link-hover">About us</a>
+                      <a class="link link-hover">Contact</a>
+                      <a class="link link-hover">Jobs</a>
+                      <a class="link link-hover">Press kit</a>
+                  </nav>
+              </div>
+              <div class="flex flex-col ml-24 lg:ml-0">
+                  <nav class="flex flex-col">
+                      <header class="footer-title">Services</header>
+                      <a class="link link-hover">Branding</a>
+                      <a class="link link-hover">Design</a>
+                      <a class="link link-hover">Marketing</a>
+                      <a class="link link-hover">Advertisement</a>
+                  </nav>
+              </div>
+          </div>
+      </footer>
   </footer>
 </body>
 
